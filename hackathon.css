@@ -1,0 +1,14 @@
+body {
+	background-color: #000;
+}
+
+.streaming {
+	width:1000px;
+	margin: 0 auto;
+}
+
+.stream {
+	float:left;
+	height:200px;
+	width:250px;
+}
