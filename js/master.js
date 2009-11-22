@@ -28,11 +28,13 @@ $('document').ready(function() {
 	$("#stream-activation input:radio[name='track']").change(function(){
 		var current_track = $("#current_track").val();
 		$("#stream-activation input:checkbox[name='" + current_track + "']").attr('checked', true);
+		$("#stream-" + current_track).toggleClass("inactive");
 		
 		$("#track-video").html($("#stream-" + this.value + " .stream-video").html().replace("250", "500").replace("200", "400"));
 		$("#track-title").html($("#stream-" + this.value + " .stream-title").html());
 		
 		$("#stream-activation input:checkbox[name='" + this.value + "']").attr('checked', false);
 		$("#current_track").val(this.value);
+		$("#stream-" + this.value).toggleClass("inactive");
 	})
 });
