@@ -22,6 +22,7 @@ $('document').ready(function() {
 	$('#clock-cowtown').jclock($.extend(default_clock_options, {utcOffset: -6}));
 	
 	$("#stream-activation input:checkbox").change(function(){
+		$("#stream-activation input:radio[name='" + this.name "']").toggle();
 		$("#stream-" + this.name).toggleClass("inactive");
 	})
 	
