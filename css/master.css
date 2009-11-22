@@ -1,6 +1,7 @@
 body {
 	background-color: #000;
 	font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin: 0 auto;
 	text-align:center;
 }
 
@@ -9,9 +10,13 @@ a {
 	text-decoration:none;
 }
 
+#stream-track{
+	float:left;
+	width:500px;
+}
+
 #streaming-wall {
-	width:1250px;
-	margin: 0 auto;
+	width:750px;
 }
 
 .stream {
