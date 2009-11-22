@@ -21,11 +21,18 @@ $('document').ready(function() {
 	$('#clock-pumpingone').jclock($.extend(default_clock_options, {utcOffset: -6}));
 	$('#clock-cowtown').jclock($.extend(default_clock_options, {utcOffset: -6}));
 	
-	$("#stream-activation input:checkbox").click(function(){
-		if (this.checked) {
-		  $("#stream-" + this.name).show();
-		} else {
-			$("#stream-" + this.name).hide();
-		}
+	$("#stream-activation input:checkbox").change(function(){
+		$("#stream-" + this.name).toggleClass("inactive");
+	})
+	
+	$("#stream-activation input:radio[name='track']").change(function(){
+		var current_track = $("#current_track").val();
+		$("#stream-activation input:checkbox[name='" + current_track + "']").attr('checked', true);
+		
+		$("#track-video").html($("#stream-" + this.value + " .stream-video").html().replace("250", "500").replace("200", "400"));
+		$("#track-title").html($("#stream-" + this.value + " .stream-title").html());
+		
+		$("#stream-activation input:checkbox[name='" + this.value + "']").attr('checked', false);
+		$("#current_track").val(this.value);
 	})
 });

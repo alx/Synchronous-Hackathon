@@ -16,76 +16,86 @@
 <body>
 	
 	<div id="stream-track">
-		<a href="http://hackerspaces.org/wiki/TOG">TOG</a> - <span id="clock-tog" class="clock"></span>
-		<embed flashvars='autoplay=true' allowfullscreen='true' width='500px' height='400px' src='http://www.ustream.com/flash/live/1/1956863' type='application/x-shockwave-flash' />
+		
+		<div id="track">
+			<span id="track-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='500px' height='400px' src='http://www.ustream.com/flash/live/1/1971768' type='application/x-shockwave-flash' /></span>
+			<span id="track-title"><a href="http://hackerspaces.org/wiki/Tetalab">Tetalab</a> <span id="clock-tetalab" class="clock"></span><span>
+			<input type="hidden" name="current_track" value="tetalab" id="current_track">
+		</div>
+		
 		<div id="stream-activation">
 			<ul>
-				<li><input type="checkbox" name="alphaone" checked>Alpha-one Labs</li>
-				<li><input type="checkbox" name="makerslocal256" checked>Makers Local 256</li>
-				<li><input type="checkbox" name="familab" checked>Familab</li>
-				<li><input type="checkbox" name="syn2cat" checked>Syn2Cat</li>
-				<li><input type="checkbox" name="hive13" checked>Hive 13</li>
-				<li><input type="checkbox" name="initlab">init Lab</li>
+				<li><input type="radio" name="track" value="alphaone"/><input type="checkbox" name="alphaone" checked>Alpha-one Labs</li>
+				<li><input type="radio" name="track" value="makerslocal256"/><input type="checkbox" name="makerslocal256" checked>Makers Local 256</li>
+				<li><input type="radio" name="track" value="familab"/><input type="checkbox" name="familab" checked>Familab</li>
+				<li><input type="radio" name="track" value="syn2cat"/><input type="checkbox" name="syn2cat" checked>Syn2Cat</li>
+				<li><input type="radio" name="track" value="hive13"/><input type="checkbox" name="hive13" checked>Hive 13</li>
+				<li><input type="radio" name="track" value="initlab"/><input type="checkbox" name="initlab" checked>init Lab</li>
 			</ul>
 			
 			<ul>
-				<li><input type="checkbox" name="tetalab" checked>Tetalab</li>
-				<li><input type="checkbox" name="kwartzLab" checked>KwartzLab</li>
-				<li><input type="checkbox" name="bcn">HackerSpace BCN</li>
-				<li><input type="checkbox" name="cowtown" checked>Cowtown Computer Congress</li>
-				<li><input type="checkbox" name="freeside" checked>Freeside Atlanta</li>
+				<li><input type="radio" name="track" value="tetalab" checked/><input type="checkbox" name="tetalab">Tetalab</li>
+				<li><input type="radio" name="track" value="tog"/><input type="checkbox" name="tog" checked>TOG</li>
+				<li><input type="radio" name="track" value="kwartzLab"/><input type="checkbox" name="kwartzLab" checked>KwartzLab</li>
+				<li><input type="radio" name="track" value="bcn"/><input type="checkbox" name="bcn" checked>HackerSpace BCN</li>
+				<li><input type="radio" name="track" value="cowtown"/><input type="checkbox" name="cowtown" checked>Cowtown Computer Congress</li>
+				<li><input type="radio" name="track" value="freeside"/><input type="checkbox" name="freeside" checked>Freeside Atlanta</li>
 			</ul>
 		</div>
 	</div>
 	
 	<div id="streaming-wall">
 		<div id="stream-alphaone" class="stream">
-		<a href="http://hackerspaces.org/wiki/Alpha_One_Labs">Alpha-one Labs</a> - <span id="clock-alphaone" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1630309' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Alpha_One_Labs">Alpha-one Labs</a> <span id="clock-alphaone" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1630309' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-makerslocal256" class="stream">
-		<a href="http://hackerspaces.org/wiki/Makers_Local_256">Makers Local 256</a> - <span id="clock-makerslocal256" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1853915' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Makers_Local_256">Makers Local 256</a> <span id="clock-makerslocal256" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1853915' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-familab" class="stream">
-		<a href="http://hackerspaces.org/wiki/FAMiLab">Familab</a> - <span id="clock-familab" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1859410' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/FAMiLab">Familab</a> <span id="clock-familab" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1859410' type='application/x-shockwave-flash' /></span>
+		</div>
+		<div id="stream-tog" class="stream">
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/TOG">TOG</a> <span id="clock-tog" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1956863' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-syn2cat" class="stream">
-			<a href="http://hackerspaces.org/wiki/Syn2cat">Syn2cat</a> - <span id="clock-syn2cat" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1933829' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Syn2cat">Syn2cat</a> <span id="clock-syn2cat" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1933829' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-hive13" class="stream">
-			<a href="http://hackerspaces.org/wiki/Hive13">Hive 13</a> - <span id="clock-hive13" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1906929' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Hive13">Hive 13</a> <span id="clock-hive13" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1906929' type='application/x-shockwave-flash' /></span>
 		</div>
-		<div id="stream-initlab" class="stream inactive">
-			<a href="http://hackerspaces.org/wiki/Init_lab">init Lab</a> - <span id="clock-initlab" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/814418' type='application/x-shockwave-flash' />
+		<div id="stream-initlab" class="stream">
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Init_lab">init Lab</a> <span id="clock-initlab" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/814418' type='application/x-shockwave-flash' /></span>
 		</div>
-		<div id="stream-tetalab" class="stream">
-			<a href="http://hackerspaces.org/wiki/Tetalab">Tetalab</a> - <span id="clock-tetalab" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1971768' type='application/x-shockwave-flash' />
+		<div id="stream-tetalab" class="stream inactive">
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Tetalab">Tetalab</a> <span id="clock-tetalab" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1971768' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-kwartzLab" class="stream">
-			<a href="http://hackerspaces.org/wiki/KwartzLab">KwartzLab</a> - <span id="clock-kwartzLab" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1953214' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/KwartzLab">KwartzLab</a> <span id="clock-kwartzLab" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1953214' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-pumpingone" class="stream">
-			<a href="http://hackerspaces.org/wiki/Pumping_Station:_One">Pumping One</a> - <span id="clock-pumpingone" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1867089' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Pumping_Station:_One">Pumping One</a> <span id="clock-pumpingone" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1867089' type='application/x-shockwave-flash' /></span>
 		</div>
-		<div id="stream-bcn" class="stream inactive">
-			<a href="http://hackerspaces.org/wiki/Hackerspace_Barcelona">HackerSpace BCN</a> - <span id="clock-bcn" class="clock"></span>
-			<object style="width: 250px; height: 200px;" type="text/html" data="http://riereta.net/gisschannel/itheora/index-mini.php?v=http://giss.tv:8000/arp.ogg&amp;w=250&amp;h=200"/>
+		<div id="stream-bcn" class="stream">
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Hackerspace_Barcelona">HackerSpace BCN</a> <span id="clock-bcn" class="clock"></span></span>
+			<span class="stream-video"><object style="width: 250px; height: 200px;" type="text/html" data="http://riereta.net/gisschannel/itheora/index-mini.php?v=http://giss.tv:8000/arp.ogg&amp;w=250&amp;h=200"/></span>
 		</div>
 		<div id="stream-cowtown" class="stream">
-			<a href="http://hackerspaces.org/wiki/Cowtown_Computer_Congress">Cowtown Computer Congress</a> - <span id="clock-cowtown" class="clock"></span>
-			<embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1984096' type='application/x-shockwave-flash' />
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/Cowtown_Computer_Congress">Cowtown Computer Congress</a> <span id="clock-cowtown" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars='autoplay=true' allowfullscreen='true' width='250px' height='200px' src='http://www.ustream.com/flash/live/1/1984096' type='application/x-shockwave-flash' /></span>
 		</div>
 		<div id="stream-freeside" class="stream">
-			<a href="http://hackerspaces.org/wiki/FreesideAtlanta">Freeside Atlanta</a> - <span id="clock-freeside" class="clock"></span>
-			<embed flashvars="serverName=r0noc.flash.internapcdn.net&appName=r0noc_vitalstream_com/_definst_&streamName=live_freeside_hackathon&autoPlay=true&skinName=http://http.vitalstreamcdn.com/flashskins/clearSkin_1&bufferTime=3&autoRewind=true&serverName=r0noc.flash.internapcdn.net" height="200" width="250" src="http://http.vitalstreamcdn.com/flashskins/FLVPlayer.swf" />  
+			<span class="stream-title"><a href="http://hackerspaces.org/wiki/FreesideAtlanta">Freeside Atlanta</a> <span id="clock-freeside" class="clock"></span></span>
+			<span class="stream-video"><embed flashvars="serverName=r0noc.flash.internapcdn.net&appName=r0noc_vitalstream_com/_definst_&streamName=live_freeside_hackathon&autoPlay=true&skinName=http://http.vitalstreamcdn.com/flashskins/clearSkin_1&bufferTime=3&autoRewind=true&serverName=r0noc.flash.internapcdn.net" height="200" width="250" src="http://http.vitalstreamcdn.com/flashskins/FLVPlayer.swf" /></span>
 		</div>
 	</div>
 </body>
