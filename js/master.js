@@ -2,6 +2,7 @@ $('document').ready(function() {
 
 	var default_clock_options = {
 		format: '%H:%M',
+		foreground: '#fff',
 		utc: true,
 		timeout: 60000
 	}
