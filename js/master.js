@@ -20,4 +20,12 @@ $('document').ready(function() {
 	$('#clock-makerslocal256').jclock($.extend(default_clock_options, {utcOffset: -6}));
 	$('#clock-pumpingone').jclock($.extend(default_clock_options, {utcOffset: -6}));
 	$('#clock-cowtown').jclock($.extend(default_clock_options, {utcOffset: -6}));
+	
+	$("#stream-activation input:checkbox").click(function(){
+		if (this.checked) {
+		  $("#stream-" + this.name).show();
+		} else {
+			$("#stream-" + this.name).hide();
+		}
+	})
 });
